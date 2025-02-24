@@ -17,13 +17,14 @@ config:
           arrivalRate: 3
           name: Sustained peak load
 scenarios:
-    flow:
-          - loop:
+    default:
+        flow:
+            - loop:
                 - post:
-                      url: '/api/v1/prediction/chatflow-id' # replace with your chatflowid
-                      json:
-                          question: 'hello' # replace with your question
-            count: 1 # how many request each user make
+                    url: '/api/v1/prediction/chatflow-id' # replace with your chatflowid
+                    json:
+                        question: 'hello' # replace with your question
+              count: 1 # how many requests each user makes
 
 # User  __
 # 3    /
